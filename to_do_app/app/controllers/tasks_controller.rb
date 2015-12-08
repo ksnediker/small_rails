@@ -2,7 +2,7 @@ class TasksController < ApplicationController
 	before_action :find_task, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@tasks = Task.all.order("created_at DESC")
+		@tasks = Task.where(user_id: current_user)
 	end
 
 	def show
