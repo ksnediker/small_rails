@@ -15,3 +15,31 @@
  */
  
 @import "normalize";
+
+#index_head {
+	color: black;
+}
+
+a:link {
+	color: #668586;
+}
+
+a:visited {
+	color: #93C6D6;
+}
+
+a:hover {
+    color: #9E8FB2;
+}
+
+body {
+	color: #668586;
+	text-align: center;
+	display: inline-block;
+}
+
+#nav {
+	background-color: #f0f0f5;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
