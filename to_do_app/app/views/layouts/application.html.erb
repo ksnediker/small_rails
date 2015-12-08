@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ToDoApp</title>
+  <title>ToDo</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<h1 id='logo'><%= link_to image_tag('logo.png'), root_path %></h1>
+	<nav>
+		<% if user_signed_in? %>
+			<%= link_to "New task", new_task_path %>
+			<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+		<% else %>
+			<%= link_to "Log in", new_user_session_path %>
+		<% end %>
+
+	</nav>
 
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
